@@ -41,7 +41,7 @@ C:\Dev_ohhstargram
 
 ### 2. SSH keyの登録  
 2.1. `Git Bash`を開く : マウスの右クリック⇒`Git Bash Here`クリック  
-
+2.2 下記のコマンドを打つ : SSH keyの作成
 ```shell
 ssh-keygen -t rsa -C "your.email@example.com" -b 4096
 ```  
@@ -51,12 +51,15 @@ C:\Users\Sangmok Oh\.ssh
 ├── id_rsa
 ├── id_rsa.pub
 ```
+※ `id_rsa`は`PRIVATE KEY`なので、絶対に忘れないようにしてください。  
+忘れたら、リモートリポジトリからCLONEが出来なくなるため、管理者(@SangmokDavidOh)にお問い合わせしてください。  
 
-2.2 Public keyを開く  
+2.3 Public keyを開く  
 上記の2.1で作った**id_rsa.pub**をさくらエディターで開いて、リモートリポジトリの管理者に送ってください。
 
 ### 3. ソースコードをCLONEする
 3.1 `Git Bash`を開く
+3.2 下記のコマンドを打つ
 ```bash
 cd C:\Dev_ohhstargram\application
 git clone git@github.com:SangmokDavidOh/ohhstargram-core.git
